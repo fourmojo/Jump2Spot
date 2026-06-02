@@ -14,8 +14,8 @@ export interface Story {
   distanceM?: number;
   year: number;
   score: number;
+  imageUrl: string;
   imageColor: string;
-  url?: string;
   tags: string[];
 }
 
@@ -29,12 +29,12 @@ export const CATEGORY_LABELS: Record<Category, string> = {
 };
 
 export const CATEGORY_COLORS: Record<Category, { bg: string; text: string; light: string }> = {
-  film:       { bg: 'bg-blue-100',   text: 'text-blue-800',   light: 'bg-blue-50' },
-  music:      { bg: 'bg-purple-100', text: 'text-purple-800', light: 'bg-purple-50' },
-  photo:      { bg: 'bg-amber-100',  text: 'text-amber-800',  light: 'bg-amber-50' },
-  biography:  { bg: 'bg-rose-100',   text: 'text-rose-800',   light: 'bg-rose-50' },
-  art:        { bg: 'bg-emerald-100',text: 'text-emerald-800',light: 'bg-emerald-50' },
-  innovation: { bg: 'bg-orange-100', text: 'text-orange-800', light: 'bg-orange-50' },
+  film:       { bg: 'bg-blue-100',    text: 'text-blue-800',    light: 'bg-blue-50' },
+  music:      { bg: 'bg-purple-100',  text: 'text-purple-800',  light: 'bg-purple-50' },
+  photo:      { bg: 'bg-amber-100',   text: 'text-amber-800',   light: 'bg-amber-50' },
+  biography:  { bg: 'bg-rose-100',    text: 'text-rose-800',    light: 'bg-rose-50' },
+  art:        { bg: 'bg-emerald-100', text: 'text-emerald-800', light: 'bg-emerald-50' },
+  innovation: { bg: 'bg-orange-100',  text: 'text-orange-800',  light: 'bg-orange-50' },
 };
 
 export const stories: Story[] = [
@@ -52,7 +52,8 @@ export const stories: Story[] = [
     distanceM: 210,
     year: 1971,
     score: 98,
-    imageColor: 'from-amber-900 to-amber-700',
+    imageUrl: 'https://images.unsplash.com/photo-1559825481-12a05cc00344?w=1200&q=80',
+    imageColor: 'from-teal-900 to-teal-700',
     tags: ['environment', 'activism', 'history'],
   },
   {
@@ -69,6 +70,7 @@ export const stories: Story[] = [
     distanceM: 80,
     year: 2013,
     score: 91,
+    imageUrl: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200&q=80',
     imageColor: 'from-blue-900 to-blue-700',
     tags: ['marvel', 'blockbuster', 'production'],
   },
@@ -86,6 +88,7 @@ export const stories: Story[] = [
     distanceM: 340,
     year: 1981,
     score: 89,
+    imageUrl: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=1200&q=80',
     imageColor: 'from-purple-900 to-purple-700',
     tags: ['rock', 'live music', 'venue'],
   },
@@ -103,6 +106,7 @@ export const stories: Story[] = [
     distanceM: 1200,
     year: 1979,
     score: 86,
+    imageUrl: 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=1200&q=80',
     imageColor: 'from-rose-900 to-rose-700',
     tags: ['canadian music', 'rock', 'songwriter'],
   },
@@ -120,6 +124,7 @@ export const stories: Story[] = [
     distanceM: 420,
     year: 1990,
     score: 84,
+    imageUrl: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80',
     imageColor: 'from-rose-800 to-pink-700',
     tags: ['literature', 'pop culture', 'writing'],
   },
@@ -137,13 +142,14 @@ export const stories: Story[] = [
     distanceM: 60,
     year: 2015,
     score: 93,
+    imageUrl: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1200&q=80',
     imageColor: 'from-red-900 to-red-700',
     tags: ['marvel', 'ryan reynolds', 'comedy'],
   },
   {
     id: '7',
     title: 'The original Greenpeace office — above a shoe store',
-    excerpt: "The organization that would become the world's largest environmental group started in a second-floor office on West 4th.",
+    excerpt: "The world's largest environmental group started in a second-floor office on West 4th. It rented for $175 a month.",
     body: "The original Greenpeace office was located above a shoe store at 2007 West 4th Avenue in Kitsilano. The space rented for $175 a month in 1971. Founding members including Bob Hunter, Robert Lund, and Irving Stowe held their early planning meetings here, surrounded by anti-war posters and a donated mimeograph machine used to print their first newsletters. The shoe store is long gone. The building was renovated in the 1990s and now houses a yoga studio on the ground floor — a transition that Greenpeace co-founder Rex Weyler has described in interviews as 'cosmically appropriate.' The second-floor office space is used for storage.",
     category: 'innovation',
     address: '2007 W 4th Ave',
@@ -154,6 +160,7 @@ export const stories: Story[] = [
     distanceM: 3800,
     year: 1971,
     score: 82,
+    imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80',
     imageColor: 'from-emerald-900 to-teal-700',
     tags: ['environment', 'activism', 'nonprofit'],
   },
@@ -171,7 +178,8 @@ export const stories: Story[] = [
     distanceM: 900,
     year: 1986,
     score: 95,
-    imageColor: 'from-teal-900 to-cyan-700',
+    imageUrl: 'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=1200&q=80',
+    imageColor: 'from-sky-900 to-cyan-700',
     tags: ['expo', 'urban development', 'history'],
   },
 ];
