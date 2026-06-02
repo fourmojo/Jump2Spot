@@ -72,30 +72,24 @@ export function ExploreView({ stories, onStorySelect }: ExploreViewProps) {
           </div>
         </div>
 
-        {/* Location stat */}
-        <div className="bg-stone-50 border border-stone-200 rounded-2xl p-4">
-          <p className="text-[10px] uppercase tracking-widest text-stone-400 font-medium mb-1">You're near</p>
-          <p className="text-lg font-semibold text-stone-900 tracking-tight">Gastown, Vancouver</p>
-          <p className="text-sm text-stone-500 mt-0.5 mb-3">Water St & Abbott St</p>
-          <span className="inline-flex items-center gap-1.5 text-xs text-emerald-700 bg-emerald-50 border border-emerald-100 px-3 py-1 rounded-full">
-            <Layers size={11} />
-            {stories.length} stories in this neighbourhood
-          </span>
-        </div>
+
       </div>
 
       {/* Right column — story list */}
       <div className="flex-1 flex flex-col gap-4">
-        {/* Mobile location context */}
-        <div className="lg:hidden bg-stone-50 border border-stone-200 rounded-2xl p-4">
-          <p className="text-[10px] uppercase tracking-widest text-stone-400 font-medium mb-1">You're near</p>
-          <p className="text-lg font-semibold text-stone-900">Gastown, Vancouver</p>
-          <p className="text-sm text-stone-500 mt-0.5">{stories.length} stories nearby</p>
-        </div>
 
-        <p className="text-[10px] uppercase tracking-widest text-stone-400 font-medium">
-          {nearby.length} stories near you
-        </p>
+        {/* Location context + story count — top row */}
+        <div className="flex items-center justify-between gap-4 bg-stone-50 border border-stone-200 rounded-2xl px-4 py-3">
+          <div>
+            <p className="text-[10px] uppercase tracking-widest text-stone-400 font-medium mb-0.5">You're near</p>
+            <p className="text-base font-semibold text-stone-900 tracking-tight leading-tight">Gastown, Vancouver</p>
+            <p className="text-xs text-stone-400 mt-0.5">Water St & Abbott St</p>
+          </div>
+          <span className="shrink-0 inline-flex items-center gap-1.5 text-xs text-emerald-700 bg-emerald-50 border border-emerald-100 px-3 py-1.5 rounded-full">
+            <Layers size={11} />
+            {stories.length} stories nearby
+          </span>
+        </div>
 
         {/* Featured story — large card with image */}
         {featured && (
